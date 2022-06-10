@@ -24,6 +24,7 @@ def answer_create(request, question_id):
             answer.save()
             return redirect('{}#answer_{}'.format(
                 resolve_url('pybo:detail', question_id=question.id), answer.id))
+
     else:
         return HttpResponseNotAllowed('Only POST is possible.')
     context = {'question': question, 'form': form}

@@ -31,6 +31,10 @@
             <th style="width:50%">제목</th>
             <th>글쓴이</th>
             <th>작성일시</th>
+
+            <!--조회수-->
+            <th>조회수</th>
+
         </tr>
         </thead>
         <tbody>
@@ -54,6 +58,7 @@
             </td>
             <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
             <td>{{ question.create_date }}</td>
+            <td>{{ question.hit }}</td>  <!-- 조회수 -->
         </tr>
         {% endfor %}
         {% else %}
