@@ -36,7 +36,7 @@ def detail(request, question_id):
     pybo 내용 출력
     """
     page = request.GET.get('page', '1')  # 페이지
-    so = request.GET.get('so', 'recommend')  # 정렬기준
+    so = request.GET.get('so', 'recent')  # 정렬기준
     question = get_object_or_404(Question, pk=question_id)
     if so == 'recommend':
         answer_list = Answer.objects.filter(question=question) \
