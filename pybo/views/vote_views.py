@@ -15,7 +15,7 @@ def vote_question(request, question_id):
         messages.error(request, '본인이 작성한 글은 추천할수 없습니다')
     else:
         question.voter.add(request.user)
-    return redirect('pybo:detail', question_id=question.id)
+    return redirect(question)
 
 
 @login_required(login_url='common:login')
@@ -28,4 +28,4 @@ def vote_answer(request, answer_id):
         messages.error(request, '본인이 작성한 글은 추천할수 없습니다')
     else:
         answer.voter.add(request.user)
-    return redirect('pybo:detail', question_id=answer.question.id)
+    return redirect(answer.question)
