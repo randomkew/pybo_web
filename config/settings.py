@@ -25,7 +25,7 @@ SECRET_KEY = '-sik_@iq2028t@nn=m(m%2j%a3s7br2&9nj6idtxlc=1m^qiqa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [13.124.125.252]
+ALLOWED_HOSTS = ['13.124.125.252']
 
 
 # Application definition
