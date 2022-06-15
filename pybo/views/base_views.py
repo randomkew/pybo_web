@@ -4,7 +4,7 @@ from django.db.models import Q, Count
 from ..models import Question, Answer, QuestionCount, Category
 
 
-def index(request, category_name='qna'):
+def index(request, category_name):
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색어
     so = request.GET.get('so', 'recent')  # 정렬기준
